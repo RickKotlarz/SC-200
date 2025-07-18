@@ -7,8 +7,12 @@
 
 - **Configure settings in Microsoft Defender XDR**
   - Configure alert and vulnerability notification rules
-  - Configure Microsoft Defender for Endpoint advanced features
+    - [Configure alert notifications](https://learn.microsoft.com/en-us/defender-xdr/configure-email-notifications)
+    - [Configure vulnerability email notifications](https://learn.microsoft.com/en-us/defender-endpoint/configure-vulnerability-email-notifications)
+  - [Configure Microsoft Defender for Endpoint advanced features](https://learn.microsoft.com/en-us/defender-endpoint/advanced-features)
   - Configure endpoint rules settings
+    - [Exclusions overview](https://learn.microsoft.com/en-us/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions)
+    - [Manage suppression rules](https://learn.microsoft.com/en-us/defender-endpoint/manage-suppression-rules)
   - Manage automated investigation and response capabilities in Microsoft Defender XDR
   - Configure automatic attack disruption in Microsoft Defender XDR
 
