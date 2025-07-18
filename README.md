@@ -1,8 +1,6 @@
 # Study Guide for Exam SC-200: Microsoft Security Operations Analyst
 
-Updated 2025-July-17
-
-
+- This study guide is a work in progress and not yet complete.
 
 
 ## Manage a security operations environment (20–25%)
