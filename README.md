@@ -1,25 +1,30 @@
-# Study Guide for Exam SC-200: Microsoft Security Operations Analyst
+d# Study Guide for Exam SC-200: Microsoft Security Operations Analyst
 
-- This study guide is a work in progress and not yet complete.
-
+Updated 2025-July-19
 
 ## Manage a security operations environment (20–25%)
-
 - **Configure settings in Microsoft Defender XDR**
-  - Configure alert and vulnerability notification rules
-    - [Configure alert notifications](https://learn.microsoft.com/en-us/defender-xdr/configure-email-notifications)
-    - [Configure vulnerability email notifications](https://learn.microsoft.com/en-us/defender-endpoint/configure-vulnerability-email-notifications)
-  - [Configure Microsoft Defender for Endpoint advanced features](https://learn.microsoft.com/en-us/defender-endpoint/advanced-features)
-  - Configure endpoint rules settings
-    - [Exclusions overview](https://learn.microsoft.com/en-us/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions)
-    - [Manage suppression rules](https://learn.microsoft.com/en-us/defender-endpoint/manage-suppression-rules)
-  - Manage automated investigation and response capabilities in Microsoft Defender XDR
-  - Configure automatic attack disruption in Microsoft Defender XDR
 
-
-| Term | Description |
+| Area | Notes |
 |---|---|
-| xxxx | xxxx | 
+| [Configure alert notifications](https://learn.microsoft.com/en-us/defender-xdr/configure-email-notifications) | xxxx | 
+| [Configure vulnerability email notifications in Microsoft Defender for Endpoint](https://learn.microsoft.com/en-us/defender-endpoint/configure-vulnerability-email-notifications) | xxxx |
+| [Configure Defender for Endpoint advanced features](https://learn.microsoft.com/en-us/defender-endpoint/advanced-features) <br/> &bull; Live Response <br/> &bull; Custom Network Indicators <br/> &bull; Tamper Protection| System > Settings > Endpoints > Advanced  |
+
+  - Configure endpoint rule (and exclusion) settings
+     - System > Settings > Endpoints > Rules 
+
+| Area | Notes |
+|---|---|
+| xxxx | xxxx |
+  
+  - Manage automated investigation and response capabilities in Microsoft Defender XDR
+  - [Configure automatic attack disruption in Microsoft Defender XDR
+](https://learn.microsoft.com/en-us/defender-xdr/configure-attack-disruption) | System > Settings > Endpoints > Device groups under Permissions. |
+
+- [Create an endpoint security policy](https://learn.microsoft.com/en-us/defender-endpoint/manage-security-policies#create-an-endpoint-security-policy)
+
+
 
 
 - **Manage assets and environments**
@@ -111,7 +116,20 @@
 
 | Term | Description |
 |---|---|
-| xxxx | xxxx | 
+| [Investigations](https://learn.microsoft.com/en-us/training/modules/mitigate-incidents-microsoft-365-defender/4-investigate-incidents) | Within Defender DXR, select Investigations to see all the automated investigations triggered by alerts in this incident. The investigations will perform remediation actions or wait for analyst approval of actions. If any actions are pending for approval as part of the investigation, they'll appear in the Pending actions tab.|
+| Evidence and Responses| Microsoft Defender XDR automatically investigates all the incidents' supported events and suspicious entities in the alerts, providing you with autoresponse and information about the important files, processes, services, emails, and more. This helps quickly detect and block potential threats in the incident. Each of the analyzed entities will be marked with a verdict (Malicious, Suspicious, Clean) and a remediation status. This helps you understand the remediation status of the entire incident and the next steps to further remediate.|
+| Graph| The graph visualizes associated cybersecurity threats information into an incident so you can see the patterns and correlations coming in from various data points. You can view such correlation through the incident graph. The Graph tells the story of the cybersecurity attack. |
+| [XDR Incident Severity - High (Red)](https://learn.microsoft.com/en-us/training/modules/mitigate-incidents-microsoft-365-defender/5-manage-investigate-alerts) | Alerts commonly seen associated with advanced persistent threats (APT). These alerts indicate a high risk because of the severity of damage they can inflict on devices. Examples include credential theft tools activities, ransomware activities not associated with any group, tampering with security sensors, or any malicious activities indicative of a human adversary.|
+| XDR Incident Severity - Medium (Orange) | Alerts from endpoint detection and response post-breach behaviors that might be a part of an advanced persistent threat (APT). This includes observed behaviors typical of attack stages, anomalous registry change, execution of suspicious files, and so forth. Although some might be part of internal security testing, it requires investigation as it might also be a part of an advanced attack.|
+| XDR Incident Severity - Low (Yellow) | Alerts on threats associated with prevalent malware. For example, hack-tools, nonmalware hack tools, such as running exploration commands, clearing logs, etc. often don't indicate an advanced threat targeting the organization. It could also come from an isolated security tool testing by a user in your organization.|
+| XDR Incident Severity - Informational (Grey) | Alerts that might not be considered harmful to the network but can drive organizational security awareness on potential security issues.|
+| Defender for Endpoint alert severity | Represents the severity of the detected behavior, the actual risk to the device, and most importantly, the potential risk to the organization.|
+| Defender AV threat severity | Represents the absolute severity of the detected threat (malware) and is assigned based on the potential risk to the individual device if infected.|
+| [Alert categories](https://learn.microsoft.com/en-us/training/modules/mitigate-incidents-microsoft-365-defender/5-manage-investigate-alerts) | Align closely with the attack tactics and techniques in the MITRE ATT&CK Enterprise matrix, but may also include items (like Unwanted Software) which are not part of the ATT&CK matrices.|
+| Suppress alerts | There are two contexts for a suppression rule that you can choose from: <br/> &bull; Suppress alert on this device <br/> &bull; Suppress alert in my organization |
+
+
+
 
 
 - **Investigate Microsoft 365 activities**
@@ -216,3 +234,27 @@
 <br/> Bold + Italitcs ***initiatives***
 <br/> [Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 <br/> :computer:	Read the referenced URL for additional information :computer: <br/>
+
+--- 
+
+Notes that need to be organized
+- Defender Advanced Hunting pane has access up to 30 days of logs
+- When hunting Entra ID sign-in logs using KQL, the table names are different based on where you access the logs. Defender Threat Hunting table: AADSignInEventsBeta, Sentinel table: SigninLogs. 
+   - The [AADSignInEventsBeta](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-aadsignineventsbeta-table) table is currently in beta and is being offered on a short-term basis to allow you to hunt through Microsoft Entra sign-in events. Customers need to have a Microsoft Entra ID P2 license to collect and view activities for this table. All sign-in schema information will eventually move to the IdentityLogonEvents table.
+- Defender for Identity sensors:
+  - Agentless for endpoints
+  - Domain Controller sensors monitor domain domain controller traffic
+  - AD FS / AD CS sensors monitor network traffic and authentication
+
+- [Lateral Movement Paths (LMPs)](https://learn.microsoft.com/en-us/defender-for-identity/understand-lateral-movement-paths) Defender for Identity LMPs are visual guides that help you quickly understand and identify exactly how attackers can move laterally inside your network. 
+
+- [EmailAttachmentInfo](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-emailattachmentinfo-table) This table within the advanced hunting schema is populated by and contains information about attachments on emails processed by Microsoft Defender for Office 365 (MDO).
+
+- [DeviceProcessEvents](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-deviceprocessevents-table) This table in the advanced hunting schema contains information about process creation and related events. It's populated via  Microsoft Defender for Endpoint.
+
+
+
+Entra ID protections
+ - Risky Users
+ - Risky Sign-ins
+ - Risky Apps
