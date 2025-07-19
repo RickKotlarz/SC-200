@@ -48,8 +48,7 @@ Updated 2025-July-19
 
 	| Area | Notes |
 	|---|---|
-	| [Configure automatic attack disruption
-	](https://learn.microsoft.com/en-us/defender-xdr/configure-attack-disruption) | System > Settings > Endpoints > Device groups under Permissions. |
+	| [Configure automatic attack disruption](https://learn.microsoft.com/en-us/defender-xdr/configure-attack-disruption) | System > Settings > Endpoints > Device groups under Permissions. |
 	  
 
 
@@ -117,9 +116,18 @@ Updated 2025-July-19
 
 - **Configure detections in Microsoft Sentinel**
   - Classify and analyze data by using entities
+    - Weak and strong identifies
   - Configure and manage analytics rules
   - Query Microsoft Sentinel data by using ASIM parsers
+    - Scheme or model used within SIEM solutions to reccomend, normalize, and standardize security data
   - Implement behavioral analytics
+    - User and Entity Behavior Analysis (UEBA)
+      - Uses machine learning to establish a baseline of normal activity and then look for anomalies and potential security threats based on deviations from that baseline.
+	  - Know how to enable UEBA
+	  - Configure UEBA data connectors
+	  - Setting up analytic rules
+	  - Monitoring and investigating UEBA alerts
+	  - Reviewing and tuning UEBA setting
 
 	| Area | Notes |
 	|---|---|
@@ -291,4 +299,7 @@ Entra ID protections
  - Risky Sign-ins
  - Risky Apps
  
- 
+General exam tips to know:
+ - Default values, minimum values, prerequisites, and licensing for all features and products in the stack.
+ - Microsoft reccomendations on the use of these products.
+ - Understanding of Azure roles and permissions needed for each product
