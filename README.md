@@ -1,4 +1,4 @@
-d# Study Guide for Exam SC-200: Microsoft Security Operations Analyst
+# Study Guide for Exam SC-200: Microsoft Security Operations Analyst
 
 Updated 2025-July-19
 
