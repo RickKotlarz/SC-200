@@ -1,6 +1,10 @@
+> Disclaimer: All information and content sourced within this repository is owned and copyrighted by Microsoft. I am not the creator or owner of this material. This repository is simply a collection of information brought together in one place for convenience and reference.
+
 # Study Guide for Exam SC-200: Microsoft Security Operations Analyst
 
 Updated 2025-July-19
+
+[Essential strategies for taking the SC-200 exam: Manage a security operations environment (4 part video)](https://learn.microsoft.com/en-us/shows/exam-readiness-zone/preparing-for-sc-200-manage-a-security-operations-environment?tab=tab-description)
 
 ## Manage a security operations environment (20–25%)
 - **Configure settings in Microsoft Defender XDR**
@@ -240,8 +244,6 @@ Updated 2025-July-19
 ## Supplemental Links:
 [Study guide for Exam SC-200: Microsoft Security Operations Analyst](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-200)
 
-[Preparing for SC-200: Manage a security operations environment (4 part video)](https://learn.microsoft.com/en-us/shows/exam-readiness-zone/preparing-for-sc-200-manage-a-security-operations-environment?tab=tab-description)
-
 [Microsoft Learn SC-200 training](https://docs.microsoft.com/en-us/learn/certifications/exams/sc-200)
 
 [YouTube - Microsoft Learn SC-200 training video series](https://www.youtube.com/playlist?list=PLahhVEj9XNTfSpvU-_iEvLJXiA0EDXkXQ)
@@ -266,7 +268,8 @@ Updated 2025-July-19
 
 --- 
 
-Notes that need to be organized
+### MISC Notes that need to be organized
+
 - Defender Advanced Hunting pane has access up to 30 days of logs
 - When hunting Entra ID sign-in logs using KQL, the table names are different based on where you access the logs. Defender Threat Hunting table: AADSignInEventsBeta, Sentinel table: SigninLogs. 
    - The [AADSignInEventsBeta](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-aadsignineventsbeta-table) table is currently in beta and is being offered on a short-term basis to allow you to hunt through Microsoft Entra sign-in events. Customers need to have a Microsoft Entra ID P2 license to collect and view activities for this table. All sign-in schema information will eventually move to the IdentityLogonEvents table.
@@ -281,9 +284,7 @@ Notes that need to be organized
 
 - [DeviceProcessEvents](https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-deviceprocessevents-table) This table in the advanced hunting schema contains information about process creation and related events. It's populated via  Microsoft Defender for Endpoint.
 
-
 - [Create an endpoint security policy](https://learn.microsoft.com/en-us/defender-endpoint/manage-security-policies#create-an-endpoint-security-policy)
-
 
 Entra ID protections
  - Risky Users
