@@ -240,6 +240,8 @@ Updated 2025-July-19
 ## Supplemental Links:
 [Study guide for Exam SC-200: Microsoft Security Operations Analyst](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-200)
 
+[Preparing for SC-200: Manage a security operations environment (4 part video)](https://learn.microsoft.com/en-us/shows/exam-readiness-zone/preparing-for-sc-200-manage-a-security-operations-environment?tab=tab-description)
+
 [Microsoft Learn SC-200 training](https://docs.microsoft.com/en-us/learn/certifications/exams/sc-200)
 
 [YouTube - Microsoft Learn SC-200 training video series](https://www.youtube.com/playlist?list=PLahhVEj9XNTfSpvU-_iEvLJXiA0EDXkXQ)
